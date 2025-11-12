@@ -5,7 +5,10 @@ import com.example.UserProfileAPI.dto.UserRequestDTO;
 import com.example.UserProfileAPI.dto.UserResponseDTO;
 import com.example.UserProfileAPI.exception.ResourceNotFoundException;
 import com.example.UserProfileAPI.model.User;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -56,5 +59,17 @@ public class UserService {
         }
         repository.deleteById(id);
 
+   }
+   //Implementing pagination
+   @Transactional(readOnly = true)
+   public Page<UserResponseDTO>getUsersPaged(Pageable pageable){
+        Page<User>page=repository.findAll(pageable);
+        return page.map(u->new UserResponseDTO(u.getId(),u.getName(),u.getEmail(),u.getAge()));
+   }
+    @Transactional(readOnly = true)
+
+    public Page<UserResponseDTO>searchUsersByName(String name,Pageable pageable){
+        Page<User>page=repository.findByNameIgnoreCaseContaining(name,pageable);
+        return page.map(u-> new UserResponseDTO(u.getId(),u.getName(),u.getEmail(),u.getAge()));
    }
 }
