@@ -1,62 +1,45 @@
 package com.example.UserProfileAPI.model;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 @Entity
-@Table(name="users",uniqueConstraints = @UniqueConstraint(columnNames = "email"))
+
 public class User {
-   @Id
-   @GeneratedValue(strategy = GenerationType.AUTO)
-   private long id;
-
-   private String name;
-   private int age;
-   private String email;
-    private String password;
-    private String roles;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
 
 
+    private String name;
 
-    public User(){
+    private String email;
 
-   }
-   public User(String name, int age, String email){
-       this.name=name;
-       this.age=age;
-       this.email=email;
+    private int age;
 
-   }
-
-    public User(String name, String email, int age, String encoded, String roleUser) {
+    public User(){}
+    public User(String name, String email, Integer age){
+        this.age=age;
+        this.email=email;
+        this.name=name;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
-    public void setId(long id) {
+
+    public void setId(Long id) {
         this.id = id;
     }
 
     public String getName() {
         return name;
     }
-    public String getPassword(){
-        return password;
-    }
-    public String getRoles(){
-        return roles;
-    }
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
     }
 
     public String getEmail() {
@@ -67,5 +50,11 @@ public class User {
         this.email = email;
     }
 
+    public int getAge() {
+        return age;
+    }
 
+    public void setAge(int age) {
+        this.age = age;
+    }
 }

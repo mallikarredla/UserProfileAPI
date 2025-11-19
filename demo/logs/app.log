@@ -1,0 +1,32 @@
+2025-11-13T14:28:09.337-05:00  INFO 38024 --- [UserProfileAPI] [main] c.e.U.UserProfileApiApplicationTests     : Starting UserProfileApiApplicationTests using Java 24.0.1 with PID 38024 (started by malli in C:\Users\malli\Downloads\UserProfileAPI\demo)
+2025-11-13T14:28:09.341-05:00  INFO 38024 --- [UserProfileAPI] [main] c.e.U.UserProfileApiApplicationTests     : No active profile set, falling back to 1 default profile: "default"
+2025-11-13T14:28:12.857-05:00  INFO 38024 --- [UserProfileAPI] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-13T14:28:13.048-05:00  INFO 38024 --- [UserProfileAPI] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 144 ms. Found 1 JPA repository interface.
+2025-11-13T14:28:14.636-05:00  INFO 38024 --- [UserProfileAPI] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-13T14:28:14.920-05:00  INFO 38024 --- [UserProfileAPI] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.33.Final
+2025-11-13T14:28:15.074-05:00  INFO 38024 --- [UserProfileAPI] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-13T14:28:16.064-05:00  INFO 38024 --- [UserProfileAPI] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-13T14:28:16.142-05:00  INFO 38024 --- [UserProfileAPI] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-13T14:28:16.545-05:00  INFO 38024 --- [UserProfileAPI] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7538cfe6
+2025-11-13T14:28:16.549-05:00  INFO 38024 --- [UserProfileAPI] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-13T14:28:16.669-05:00  WARN 38024 --- [UserProfileAPI] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-13T14:28:16.720-05:00  INFO 38024 --- [UserProfileAPI] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-13T14:28:18.693-05:00  INFO 38024 --- [UserProfileAPI] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-13T14:28:18.880-05:00  INFO 38024 --- [UserProfileAPI] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-13T14:28:20.754-05:00  WARN 38024 --- [UserProfileAPI] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-13T14:28:23.500-05:00 DEBUG 38024 --- [UserProfileAPI] [main] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2025-11-13T14:28:23.962-05:00  INFO 38024 --- [UserProfileAPI] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-11-13T14:28:24.001-05:00 DEBUG 38024 --- [UserProfileAPI] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, CsrfFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-11-13T14:28:24.421-05:00  INFO 38024 --- [UserProfileAPI] [main] c.e.U.UserProfileApiApplicationTests     : Started UserProfileApiApplicationTests in 16.317 seconds (process running for 21.119)
+2025-11-13T14:28:24.645-05:00  WARN 38024 --- [UserProfileAPI] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2025-11-13T14:28:24.647-05:00  WARN 38024 --- [UserProfileAPI] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2025-11-13T14:28:25.696-05:00  INFO 38024 --- [UserProfileAPI] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-13T14:28:25.708-05:00  INFO 38024 --- [UserProfileAPI] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-13T14:28:25.732-05:00  INFO 38024 --- [UserProfileAPI] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

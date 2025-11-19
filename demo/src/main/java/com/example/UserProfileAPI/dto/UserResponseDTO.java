@@ -2,30 +2,31 @@ package com.example.UserProfileAPI.dto;
 
 public class UserResponseDTO {
 
+
     private Long id;
-    private int age;
     private String name;
     private String email;
+    private int age;
 
     public UserResponseDTO(Long id, String name, String email, int age){
         this.id=id;
-        this.name=name;
         this.email=email;
         this.age=age;
+        this.name=name;
     }
-public Long getId(){
-        return id;
 
-}
-public String getName(){
+  public Long getId(){
+        return  id;
+  }
+  public String getName(){
         return name;
-}
-public String getEmail(){
+
+  }
+  public String getEmail(){
         return email;
-
-}
-public int getAge(){
+  }
+  public int getAge(){
         return age;
+  }
 
-}
 }
